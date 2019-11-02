@@ -6,6 +6,6 @@ class MeanCalculator < ApplicationCalculator
   def calculate
     return 0.0 if @list.nil? || @list.empty?
 
-    @list.reduce(&:+) / @list.size.to_f
+    (@list.reduce(&:+) / @list.size.to_f).round(2)
   end
 end

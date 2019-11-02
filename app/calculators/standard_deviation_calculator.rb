@@ -11,6 +11,6 @@ class StandardDeviationCalculator < ApplicationCalculator
       acc.to_f + ((value.to_f - @mean) ** 2)
     end
 
-    Math.sqrt(result / @list.size.to_f)
+    Math.sqrt(result / @list.size.to_f).round(2)
   end
 end

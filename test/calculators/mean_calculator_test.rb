@@ -22,6 +22,6 @@ class MeanCalculatorTest < ActiveSupport::TestCase
       list: Reading.pluck(:value)
     )
 
-    assert_equal(mean, 6.0)
+    assert_equal(mean, 4.2)
   end
 end

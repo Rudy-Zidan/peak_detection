@@ -17,11 +17,11 @@ class StandardDeviationCalculatorTest < ActiveSupport::TestCase
     assert_equal(stddv, 0.0)
   end
 
-  test "should calculate mean of all readings" do
+  test "should calculate standard deviation of all readings" do
     data = Reading.pluck(:value)
     mean = MeanCalculator.calculate(list: data)
     stddv = StandardDeviationCalculator.calculate(list: data, mean: mean)
-
-    assert_equal(stddv, 4.5)
+    
+    assert_equal(stddv, 3.52)
   end
 end
